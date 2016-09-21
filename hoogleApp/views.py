@@ -19,7 +19,13 @@ def GetEstimateData():
   resp = response.json()
   gia = resp.get('Gia')
   speech = {"speech": "Homify gia nha cua ban la:" + gia}
-  return speech
+  return {
+       "speech": speech,
+       "displayText": speech,
+       #"data": {},
+       # "contextOut": [],
+       "source": "apiai-dinh-gia"
+   }
   
 
 
