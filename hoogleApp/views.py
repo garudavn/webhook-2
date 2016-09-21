@@ -16,7 +16,10 @@ def GetEstimateData():
   url = 'https://valuation.homify.com.vn/RealEstatePriceService/landprice/'
   req = json.dumps({'cuoi':'','dau':'','diadiem':'HN','dientich':'80','duong':'Cầu Giấy','loaiBDS':'D','loaiduong':'D','mattien':'','nam':'2016','phuong':'Quan Hoa','quan':'Cầu Giấy'})
   response = requests.post(url,data=req)
-  return response.json()
+  resp = response.json()
+  gia = resp.get('Gia')
+  speech = {"speech": "Homify gia nha cua ban la:" + gia}
+  return speech
   
 
 
