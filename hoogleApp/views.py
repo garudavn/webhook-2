@@ -18,7 +18,7 @@ def GetEstimateData():
   response = requests.post(url,data=req)
   resp = response.json()
   gia = resp.get('Gia')
-  ketquatrave = {"speech": "Homify gia nha cua ban la:" + gia, "displayText": gia, "source": "apiai-dinh-gia"}
+  ketquatrave = {"speech": "Homify gia nha cua ban la:" + gia, "displayText": "Homify gia nha cua ban la:" + gia, "source": "apiai-dinh-gia"}
   return ketquatrave
   
 
